@@ -1,3 +1,5 @@
+import Text.Printf
+
 operate :: Float -> String -> Float -> Float
 
 operate num1 operator num2 = case operator of
@@ -24,4 +26,4 @@ main = do
 
   let result = operate num1 operator num2
 
-  putStrLn $ "" ++ linenum1 ++ " " ++ operator ++ " " ++ linenum2 ++ " = " ++ (show result)
+  printf "%s %s %s = %f\n" linenum1 operator linenum2 result
